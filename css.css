@@ -1,24 +1,18 @@
-/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
-    font-family: "kaushan Script", cursive;
+    font-family: "Kaushan Script", cursive;
     text-align: center;
   }
   
-  /* Estilo do Banner */
   #banner {
-    /* Fundo gradiente com imagem */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), #009688), url(images/banner.jpg);
-    /* Cobrir todo o espaço */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #009688),
+      url(images/banner.jpg);
     background-size: cover;
-    /* Centralizar imagem */
     background-position: center;
-    /* Altura igual à altura da tela */
     height: 100vh;
   }
   
-  /* Logo */
   .logo {
     width: 140px;
     position: absolute;
@@ -27,14 +21,12 @@
     display: block;
   }
   
-  /* Texto do Banner */
   .banner-text {
     text-align: center;
     color: #fff;
     padding-top: 180px;
   }
   
-  /* Botão do Banner */
   .banner-btn {
     margin: 150px;
   }
@@ -49,7 +41,6 @@
     border: 0.5px solid #fff;
     z-index: 1;
     position: relative;
-    /* Transição de cor suave */
     transition: color 0.5s;
   }
   
@@ -61,31 +52,25 @@
     left: 0;
     background-color: #ffffff;
     z-index: -1;
-    /* Transição suave */
     transition: 0.5s;
   }
   
-  /* Expandir a largura no hover */
   .banner-btn a:hover span {
     width: 100%;
   }
   
-  /* Mudar a cor do texto no hover */
   .banner-btn a:hover {
     color: #000000;
   }
   
-  /* Estilo da Navegação Lateral */
   #sideNav {
     width: 250px;
     height: 100vh;
     position: fixed;
-    /* Inicialmente fora da tela */
     right: -250px;
     top: 0;
     background: #009688;
     z-index: 2;
-    /* Transição suave */
     transition: 0.5s;
   }
   
@@ -99,7 +84,6 @@
     color: #fff;
   }
   
-  /* Estilo do Botão de Menu */
   #menuBtn {
     width: 50px;
     height: 50px;
@@ -118,7 +102,6 @@
     margin-top: 15px;
   }
   
-  /* Media Queries para Texto e Botão do Banner */
   @media screen and (max-width: 770px) {
     .banner-text h1 {
       font-size: 44px;
@@ -128,7 +111,6 @@
     }
   }
   
-  /* Estilo da Seção de Recursos */
   #feature {
     width: 100%;
     padding: 70px 0;
@@ -136,7 +118,7 @@
   
   .title-text {
     text-align: center;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
     font-weight: bold;
     position: relative;
     z-index: 1;
@@ -170,7 +152,6 @@
   .features-img img {
     width: 500px;
     height: 500px;
-    right: px;
   }
   
   .features h1 {
@@ -192,100 +173,224 @@
     }
   }
   
-  .features-container .material-symbols-sharp {
-    width: 50px;
-    height: 50px;
-    font-size: 14px;
-    line-height: 50px;
-    border-radius: 8px;
-    color: #009688;
-    border: 1px solid #009688;
+  .material-symbols-outlined {
+    font-variation-settings:
+      "FILL" 0,
+      "wght" 400,
+      "GRAD" 0,
+      "opsz" 48;
   }
   
   .feature-text p {
     padding: 0 30px;
     text-align: left;
-    text-size-adjust: 20px;
+    font-size: 20px;
   }
   
   .feature-text {
     flex: 1;
     padding-right: 10px;
-    flex: 1;
-    padding-right: 5px; /* Ajuste o valor conforme desejado */
   }
   
-  /* Media Query para a Seção de Recursos */
   @media screen and (max-width: 770px) {
-    .title-tex:h1 {
-      font-size: 35px;
+    .features-container {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
     }
+  
     .features-img img {
-      width: 300px;
-      height: 300px;
-      right: px;
+      margin-bottom: 10px;
+      order: 1;
     }
+  
     .feature-text {
-      flex: 1;
-      padding-right: 0 0px;
-      flex: 1;
-      padding-right: 50px; /* Ajuste o valor conforme desejado */
-      font-size: 10px;
+      order: -1;
+      text-align: center;
     }
   }
   
-  /* ... Outras regras de estilo ... */
-  /* Estilo da Seção de Serviços */
+  /* Estilos para a seção de serviços */
   .service-box {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   
   .single-service {
-      flex: 1;
-      max-width: calc(45% - 20px);
-      margin: 10px;
-      position: relative;
+    flex: 1;
+    max-width: calc(45% - 20px);
+    margin: 10px;
+    position: relative;
   }
   
   .image-container img {
-      width: 100%;
-      height: auto;
-      transition: transform 0.5s;
-      
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
   }
   
   .overlay {
-      top: 0;
-      bottom: 0;
-      left: 0px;
-      right: 0px;
-      position: absolute;
-      border-radius: 0px;
-      background: linear-gradient(rgba(0,0,0,0.5), #009688);
-      opacity: 0;
-      transition: opacity 1s;
-      cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    border-radius: 0px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #009688);
+    opacity: 0;
+    transition: opacity 1s;
+    cursor: pointer;
   }
   
   .single-service:hover .overlay {
-      opacity: 1;
+    opacity: 1;
   }
-  .service-descr{
-      width: 80%;
-      position: absolute;
-      bottom: 0%;
-      left: 50%;
-      transform: translate(-50%);
+  
+  .service-descr {
+    width: 80%;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 1s;
   }
-  hr{
-      background:#fff;
-      height: 2px;
-      border: 0;
-      margin: 15px auto;
-      width: 60%;
+  
+  hr {
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
   }
-.service-descr{
+  
+  .service-descr p {
     font-size: 14px;
-}  
+  }
+  
+  .single-service:hover .service-descr {
+    bottom: 40%;
+    opacity: 1;
+  }
+  
+  @media screen and (max-width: 770px) {
+    .single-service {
+      flex-basis: 100%;
+      margin-bottom: 30px;
+    }
+    .service-descr p {
+      font-size: 12px;
+    }
+    hr {
+      margin: 5px;
+    }
+  }
+  
+  /* Estilos para a seção de depoimentos */
+  /* Estilos para a seção de depoimentos */
+#Testimonial {
+    width: 100%;
+  }
+  
+  .testimonial-row {
+
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .testimonial-col {
+    flex-basis: calc(33.33% - 20px); /* Divide os depoimentos igualmente */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px #00968814;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: transform 0.5s;
+  }
+  
+  .testimonial-col p {
+    font-size: 12px;
+  }
+  
+  .user {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .user img {
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+  }
+  
+  .user-info .fa {
+    margin-left: 10px;
+    color: #27c0ff;
+    font-size: 20px;
+  }
+  
+  .user-info small {
+    color: #009688;
+  }
+  
+  .testimonial-col:hover {
+    transform: translateY(7px);
+  }
+  @media screen and (max-width: 770px) {
+  .testimonial-col{
+    flex-basis: 100%;
+  }
+
+}
+/*footer*/
+/*footer*/
+#footer{
+    padding: 100px 0 20px;
+    background: #efefef;
+    position: relative;
+}
+.footer-row{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.flooter-left,.footer-right{
+    flex-basis:45;
+padding: 10px;
+margin-bottom: 20px;
+}
+.footer-right{
+    text-align: right;
+}
+footer-row h1{
+    margin:10px 0;
+}
+footer-row p{
+    line-height: 25px;
+}
+.footer-img{
+    max-width: 280px;
+    position: absolute;
+    opacity: 0.1;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+}
+@media screen and (max-width: 770px;){
+    .footer-left,.footer-right{
+        flex-basis: 100%;
+        font-size: 14px;
+
+    }
+    .footer-img{
+        top: 25%;
+    }
+}
+    
